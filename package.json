@@ -3,7 +3,7 @@
 	"name": "slicer",
 	"description": "A library to parse URI style strings into named segments.",
 	"keywords": ["uri", "slice", "segments"],
-	"version": "0.2.0",
+	"version": "0.2.1",
 	"homepage": "http://github.com/antz29/node-slicer",
 	"repository": {
 		"type": "git",
