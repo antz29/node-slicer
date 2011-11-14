@@ -1,12 +1,13 @@
 var assert = require('assert');
+var slicer = require('../');
 
 var tests = {
 	'There will be no segment identifiers defined by default.' : function(beforeExit, assert) {
-		var s = require('slicer').create();		
+		var s = slicer.create();		
 		assert.ok(s.getSegmentIdentifiers().length == 0);	
 	},
 	'Adding a segment identifiers' : function(beforeExit, assert) {
-		var s = require('slicer').create();		
+		var s = slicer.create();		
 
 		s.addSegmentIdentifier('controller','index');
 
@@ -29,7 +30,7 @@ var tests = {
 		assert.deepEqual(segs, [{'name' : 'controller','default' : 'index'},{'name' : 'action','default' : 'index'},{'name' : 'other'}]);
 	},
 	'Segment identifiers can be retrieved' : function(beforeExit, assert) {
-		var s = require('slicer').create();
+		var s = slicer.create();
 
 		var segs = s.getSegmentIdentifiers();
 		assert.equal(segs.length,0);
@@ -42,7 +43,7 @@ var tests = {
 		assert.deepEqual(segs, [{'name' : 'controller','default' : 'index'}]);
 	},
 	'Segment identifiers can be cleared' : function(beforeExit, assert) {
-		var s = require('slicer').create();
+		var s = slicer.create();
 
 		var segs = s.getSegmentIdentifiers();
 		assert.equal(segs.length,0);
@@ -56,7 +57,7 @@ var tests = {
 		assert.ok(s.getSegmentIdentifiers().length == 0);
 	},
 	'A uri can be sliced into labelled segments' : function(beforeExit, assert) {
-		var s = require('slicer').create();
+		var s = slicer.create();
 
 		var segs = s.getSegmentIdentifiers();
 		assert.equal(segs.length,0);
