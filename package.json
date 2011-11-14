@@ -1,0 +1,37 @@
+{
+	"author": "John Le Drew <jp@antz29.com> (http://antz29.com)",
+	"name": "slicer",
+	"description": "A library to parse URI style strings into named segments.",
+	"keywords": ["uri", "slice", "segments"],
+	"version": "0.2.0",
+	"homepage": "http://github.com/antz29/node-slicer",
+	"repository": {
+		"type": "git",
+		"url": "git:/git://github.com/antz29/node-slicer.git"
+	},
+
+   	"bugs": {
+        	"email": "slicer-bugs@antz29.com",
+	        "url": "http://github.com/antz29/node-slicer/issues"
+    	},
+
+	"engines": {
+		"node": ">=0.6.0"
+	},
+
+	"directories": {
+        	"lib": "./src/lib"
+	},
+
+	"main" : "./src/lib/slicer.js",
+
+	"dependencies": {
+	},
+	"devDependencies": {
+		"expresso" : ">=0.9.0",
+		"linter" : ">=0.0.7"
+	},
+	"scripts" : {
+		"test" : "./node_modules/expresso/bin/expresso"
+	}
+}
