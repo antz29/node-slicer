@@ -3,7 +3,7 @@
 	"name": "slicer",
 	"description": "A library to parse URI style strings into named segments.",
 	"keywords": ["uri", "slice", "segments"],
-	"version": "0.2.1",
+	"version": "0.3.0",
 	"homepage": "http://github.com/antz29/node-slicer",
 	"repository": {
 		"type": "git",
@@ -23,12 +23,13 @@
         	"lib": "./src/lib"
 	},
 
-	"main" : "./src/lib/slicer.js",
+	"main" : "./src/lib/slicer.coffee",
 
 	"dependencies": {
+		"coffee-script" : "*"
 	},
 	"devDependencies": {
-		"expresso" : ">=0.9.0"
+		"expresso" : "*"
 	},
 	"scripts" : {
 		"test" : "./node_modules/expresso/bin/expresso"

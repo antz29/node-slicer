@@ -1,13 +1,20 @@
+require('coffee-script');
 var assert = require('assert');
-var slicer = require('../');
+
+function getSlicer() {
+	var Slicer = require('../');
+	return new Slicer();
+}
 
 var tests = {
 	'There will be no segment identifiers defined by default.' : function(beforeExit, assert) {
-		var s = slicer.create();		
+		console.log('* There will be no segment identifiers defined by default.')
+		var s = getSlicer();		
 		assert.ok(s.getSegmentIdentifiers().length == 0);	
 	},
 	'Adding a segment identifiers' : function(beforeExit, assert) {
-		var s = slicer.create();		
+		console.log('* Adding a segment identifiers')
+		var s = getSlicer();
 
 		s.addSegmentIdentifier('controller','index');
 
@@ -30,7 +37,8 @@ var tests = {
 		assert.deepEqual(segs, [{'name' : 'controller','default' : 'index'},{'name' : 'action','default' : 'index'},{'name' : 'other'}]);
 	},
 	'Segment identifiers can be retrieved' : function(beforeExit, assert) {
-		var s = slicer.create();
+		console.log('* Segment identifiers can be retrieved')
+		var s = getSlicer();
 
 		var segs = s.getSegmentIdentifiers();
 		assert.equal(segs.length,0);
@@ -43,7 +51,8 @@ var tests = {
 		assert.deepEqual(segs, [{'name' : 'controller','default' : 'index'}]);
 	},
 	'Segment identifiers can be cleared' : function(beforeExit, assert) {
-		var s = slicer.create();
+		console.log('* Segment identifiers can be cleared')
+		var s = getSlicer();
 
 		var segs = s.getSegmentIdentifiers();
 		assert.equal(segs.length,0);
@@ -57,7 +66,8 @@ var tests = {
 		assert.ok(s.getSegmentIdentifiers().length == 0);
 	},
 	'A uri can be sliced into labelled segments' : function(beforeExit, assert) {
-		var s = slicer.create();
+		console.log('* A uri can be sliced into labelled segments')
+		var s = getSlicer();
 
 		var segs = s.getSegmentIdentifiers();
 		assert.equal(segs.length,0);
