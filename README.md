@@ -12,8 +12,11 @@ It allows you to slice up URIs into named segments. This can be useful for routi
 
 ## Usage
 
+    // Get the Slicer module
+    var Slicer = require("slicer");
+
     // Create a new slicer (you can have multiple slicer instances that are independant of one another)
-    var s = require("slicer").create();
+    var s = new Slicer();
 
     // Add a segment identifier for the first URI segment with a default value of 'index'.
     s.addSegmentIdentifier('controller','index');
