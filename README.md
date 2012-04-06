@@ -1,6 +1,7 @@
 # node-slicer - Slice your URIs
 
-[![Build Status](https://secure.travis-ci.org/antz29/node-slicer.png)](http://travis-ci.org/#!/antz29/node-slicer)
+* master [![Build Status](https://secure.travis-ci.org/antz29/node-slicer.png?branch=master)](http://travis-ci.org/antz29/node-slicer)
+* develop [![Build Status](https://secure.travis-ci.org/antz29/node-slicer.png?branch=develop)](http://travis-ci.org/antz29/node-slicer)
 
 ## Installation
 
